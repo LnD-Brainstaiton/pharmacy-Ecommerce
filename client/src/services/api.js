@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create an Axios instance with a base URL
 const api = axios.create({
-  baseURL: "http://127.0.0.1:4000/api/", // this is the backend URL
+  baseURL: "https://pharmacy-ecommerce.onrender.com/api/", // this is the backend URL
 });
 
 // Add a request interceptor to include the Authorization header if available
