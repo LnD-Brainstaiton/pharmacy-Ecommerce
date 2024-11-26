@@ -143,7 +143,8 @@ const FileScanner = () => {
             </div>
           </div>
         )}
-        {ocrText && (
+
+        {/* {ocrText && (
           <div className="mt-8 w-full">
             <h3 className="text-xl font-bold mb-4 text-center">
               Extracted Text:
@@ -152,7 +153,8 @@ const FileScanner = () => {
               {ocrText}
             </p>
           </div>
-        )}
+        )} */}
+
         {loading && (
           <p className="mt-8 text-blue-500 text-center text-lg flex items-center justify-center">
             <FaCheckCircle className="mr-2 text-blue-500" />

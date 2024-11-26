@@ -3,10 +3,7 @@ const path = require("path");
 require("dotenv").config();
 
 const client = new vision.ImageAnnotatorClient({
-  keyFilename: path.join(
-    __dirname,
-    "../decisive-cinema-442805-t7-8514dd159261.json"
-  ),
+  keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
 });
 
 const googleOCR = async (fileBuffer) => {

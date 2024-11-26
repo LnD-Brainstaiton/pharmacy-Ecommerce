@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import api from "../../services/api";
 
 // Initialize Socket.IO
-const socket = io("http://localhost:4000"); // Replace with your backend URL
+const socket = io("https://pharmacy-ecommerce.onrender.com"); // Replace with your backend URL
 
 const SupportChat = () => {
   const [isOpen, setIsOpen] = useState(false);

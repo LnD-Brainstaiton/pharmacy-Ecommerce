@@ -4,7 +4,7 @@ import api from "../../services/api";
 import io from "socket.io-client";
 
 // Initialize Socket.IO
-const socket = io("http://localhost:4000"); // Use your backend's URL
+const socket = io("https://pharmacy-ecommerce.onrender.com"); // Use your backend's URL
 
 const AdminChatPage = () => {
   const { user } = useContext(AuthContext); // Get the user from context
@@ -23,9 +23,7 @@ const AdminChatPage = () => {
       const response = await api.get("chats/");
       if (response.data && Array.isArray(response.data)) {
         const filteredChats = response.data.filter(
-          (chat) =>
-            !(chat.sender?._id === AdminId) &&
-            !chat.sender?.isAdmin // Exclude chats between admins
+          (chat) => !(chat.sender?._id === AdminId) && !chat.sender?.isAdmin // Exclude chats between admins
         );
 
         setChats(
